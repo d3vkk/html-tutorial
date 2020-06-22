@@ -4,7 +4,7 @@
 
 HTML Basics Tutorial from Derek Banas
 
-https://www.youtube.com/watch?v=kDyJN7qQETA
+[Youtube Video](https://www.youtube.com/watch?v=kDyJN7qQETA)
 
 ```
 git clone https://github.com/d3vkk/html-basics-tutorial.git
