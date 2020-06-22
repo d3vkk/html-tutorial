@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>LEARNING HTML</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Donald K">
+	<style type="text/css">
+		body {
+			font-size: 1.6em;
+			background: #F2EEE1;
+		}
+
+		.title {
+			display: block;
+			background-color: #f79999;
+			font-size: 3em;
+			color: #111;
+		}
+
+		.hidden {
+			display: none;
+		}
+
+		.show {
+			display: inline !important;
+		}
+
+		button {
+			border: 2px solid black;
+			background: #E5E4E2;
+			font-size: .5em;
+			font-weight: bold;
+			color: black;
+			padding: .8em 2em;
+			margin-top: .4em;
+		}
+
+		.linehr {
+			width: 100%;
+			height: 10px;
+			background-color: mediumaquamarine;
+		}
+
+		.subtitle {
+			display: block;
+			background-color: #ff9c23;
+			font-size: 1em;
+			color: #222;
+		}
+
+		.notes {
+			display: block;
+			background-color: #fff;
+			font-size: 0.7em;
+			color: #333;
+		}
+
+		ul,
+		li {
+			list-style-type: none;
+			margin: 0;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="title">LEARNING HTML</div>
+	<div class="subtitle">CREATE IMAGE MAP</div>
+	<img src="bulb.jpg" alt="Image Map" width="200px" height="200px" usemap="#map">
+	<!--USE image maps to have one image embedded with several links (Learn from Derek Banas HTML5 Tutorial at 25:11)-->
+	<div class="subtitle">EMBEDDED PDF using object tag</div>
+	<object data="CSSfontfacerule.pdf" type="application/pdf" width="750" height="400"></object>
+	<div class="subtitle">EMBEDDED HTML PAGE using object tag</div>
+	<object data="learn-html.html" type="text/html" width="750" height="400"></object>
+	<div class="subtitle">EMBEDDED AUDIO using object tag</div>
+	<object data="sound.mp3" type="audio/x-wav" width="200" height="200">
+		<param name="autoplay" value="false">
+		<param name="controller" value="true">
+	</object>
+	<div class="subtitle">OTHER FORMATS FOR using object tag</div>
+	<div class="notes">
+		<ul>
+			<li>application/msword : MS Doc Files</li>
+			<li>application/x-java-applet : Java Applet</li>
+			<li>audio/mpeg : MP3s</li>
+			<li>image/png : PNGs</li>
+			<li>image/jpeg : JPEGs</li>
+			<li>image/gif : GIFs</li>
+			<li>image/svg+xml : SVG Vector images</li>
+			<li>text/plain : Text</li>
+			<li>video/mp4 : MP4s</li>
+			<li>video/x-msvideo : AVIs</li>
+			<li>video/x-ms-wmv : WMVs</li>
+			<li>video/quicktime : MOVs</li>
+		</ul>
+	</div>
+	<div class="subtitle">EMBEDDED VIDEO using iframe tag</div>
+	<iframe width="500" height="200" src=".mp4" allowfullscreen=""></iframe>
+	<div class="subtitle">EMBEDDED FLASH FILE using embed tag</div>
+	<embed src="flash.swf" pluginspage="" type="application/x-shockwave-flash" width="300" height="100" loop="false" quality="high">
+	<div class="subtitle">EMBEDDED AUDIO FILE using audio tag</div>
+	<audio controls>
+		<!--THESE ATTRIBUTES CAN BE INSERTED ON THE VIDEO TAG AS WELL: autoplay loop preload-->
+		<source src="sound.mp3" type="audio/wav">
+		Browser doesn't support the audio tag
+	</audio>
+	<div class="subtitle">EMBEDDED VIDEO FILE using video tag</div>
+	<video controls>
+		<!--THESE ATTRIBUTES CAN BE INSERTED ON THE VIDEO TAG AS WELL: autoplay loop preload-->
+		<source src=".mp4" type="video/mp4">
+		Browser doesn't support the video tag
+	</video>
+	<div class="subtitle">LIST-STYLE-IMAGE FOR ul OR ol tags</div>
+	<div class="notes">
+		(Change From Editor)
+		<ul list-style-image="bulb.png">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+		</ul>
+	</div>
+	<!--
+    <style>
+        li {
+            list-style-image: url(bulb.jpg)
+        }
+    </style>
+    -->
+	<div class="subtitle">FORMS IN HTML</div>
+	<div class="notes">
+		(Make the PHP Path Executable)
+		<form method="GET" action="form.php">
+			Your Name:
+			<br>
+			<input class="textbox" type="text" name="name" size="25" maxlength="25" placeholder="Enter your name here">
+			<br>
+			Your Password:
+			<br>
+			<input class="textbox" type="password" name="password" size="25" maxlength="25" placeholder="Enter your password here">
+			<br>
+			<input type="submit" name="submit" value="ENTER">
+			<input type="reset" name="reset" value="CLEAR">
+			<br>
+			Your History:
+			<br>
+			<textarea class="textarea" name="history" rows="15" cols="70" placeholder="Enter your history here"></textarea>
+			<fieldset>
+				<legend>Your Favourite</legend>
+				<fieldset>
+					<legend>Hobby</legend>
+					Eating(checked by default)<input type="radio" name="hobby" value="Eating" checked>
+					Sleeping<input type="radio" name="hobby" value="Sleeping">
+				</fieldset>
+				<fieldset>
+					<legend>Hotel Rating</legend>
+					One Star<input type="range" name="hobby" value="Hobby">Five Star
+				</fieldset>
+				<fieldset>
+					<legend>Color</legend>
+					<input type="color" name="color" value="Color">
+				</fieldset>
+				<fieldset>
+					<legend>File</legend>
+					<input type="file" name="file" value="File">
+				</fieldset>
+
+				<fieldset>
+					<legend>Number</legend>
+					<select name="favnum">
+						<option value="num">1</option>
+						<option value="num">2</option>
+						<option value="num">3</option>
+						<optgroup label="Prime Numbers (using optgroup)">
+							<option value="num">11</option>
+							<option value="num">29</option>
+							<option value="num">31</option>
+						</optgroup>
+						<optgroup label="Big Numbers (using optgroup)">
+							<option value="num">2344555555555555555553</option>
+							<option value="num">122222222222222221213</option>
+							<option value="num">121211111111111111234</option>
+						</optgroup>
+					</select>
+				</fieldset>
+			</fieldset>
+			<fieldset>
+				<legend>Alternative Way of Inserting Image</legend>
+				<input type="image" alt="image" src="">
+			</fieldset>
+			<fieldset>
+				<legend class="subtitle">Submitting Hidden Data via Javascript</legend>
+				<input type="hidden" name="IP-Address" id="IP">
+				<input type="hidden" name="Browser" id="browser">
+			</fieldset>
+		</form>
+	</div>
+	<style>
+		.textbox,
+		.textarea {
+			border-radius: 5px;
+			border: none;
+			background-color: #ddd;
+		}
+
+		.textbox {
+			height: 2em;
+		}
+	</style>
+	<hr class="linehr">
+</body></html>
